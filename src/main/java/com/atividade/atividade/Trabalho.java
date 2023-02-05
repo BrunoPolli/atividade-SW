@@ -1,8 +1,23 @@
 package com.atividade.atividade;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Trabalho")
 
 public class Trabalho {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", nullable = false)
+	public long id;
+
+	@Column(name = "titulo", length = 20)
 	public String titulo;
+
+	@Column(name = "conteudo", length = 50)
 	public String conteudo;
+	
+	@Column(name = "autor", length = 20)
 	public String autor;
 	
 	
